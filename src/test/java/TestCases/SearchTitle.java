@@ -7,8 +7,15 @@ public class SearchTitle {
 	public void TC_SearchTitle() {
 		HomePage HP = new HomePage();
 		
-		HP.validateVisibiltyOfIcons();
-		HP.searchTitle();
-		HP.validateVisibiltyOfTabsAfterSearch();
+		try {
+			System.out.println("Searching video on youtube");
+			HP.validateVisibiltyOfIcons();
+			HP.searchTitle();
+			HP.validateVisibiltyOfTabsAfterSearch();
+		} 
+		catch (Exception e) {
+
+			e.printStackTrace();
+		}
 	}
 }

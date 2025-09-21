@@ -21,6 +21,7 @@ public class BasePage {
 	public static void instantiateWebBrowser() throws Exception
 	{
 	 driver = new ChromeDriver();
+	 System.out.println("Launching chrome");
 	 driver.get("https://www.youtube.com");
 	 driver.manage().window().maximize();
 	 driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5000));
@@ -39,7 +40,8 @@ public class BasePage {
 	 
 	}
 	
-	public static void quitBroswer() {		
+	public static void quitBroswer() {
+		System.out.println("Quiting browser");
 		driver.quit();
 	}
 }
